@@ -1,2 +1,12 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1>Task <%= @task.id %></h1>
+
+<p>Name: <%= @task.name %></p>
+
+<p>Description: <%= @task.description %></p>
+
+
+<p>Effort: <%= @task.real_effort %> / <%= @task.estimative_effort %> hours</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %>
+<%= link_to 'List Tasks', tasks_path %>

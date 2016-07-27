@@ -1,17 +1,5 @@
 <h1>Create new Task</h1>
 
-<%= form_for(@task) do |f| %>
-	<%= f.label :name %>	
-	<%= f.text_field :name %>
+<%= render 'form' %>
 
-	<%= f.label :description %>	
-	<%= f.text_field :description %>
-
-	<%= f.label :real_effort %>	
-	<%= f.text_field :real_effort %>
-
-	<%= f.label :estimative_effort %>	
-	<%= f.text_field :estimative_effort %>
-
-	<%= f.submit %>
-<% end %>
+<%= link_to 'List Tasks', tasks_path %>
