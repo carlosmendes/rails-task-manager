@@ -1,0 +1,22 @@
+<h1>Tasks</h1>
+
+<%= link_to 'New Task', tasks_new_path %>
+
+<table>
+	<th>
+		<td>Name</td>
+		<td>Effort</td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</th>
+	<% @tasks.each do |task| %>
+	<tr>
+		<td><%= task.name %></td>
+		<td><%= task.real_effort %> / <%= task.estimative_effort %> hours</td>
+		<td>Show</td>
+		<td>Edit</td>
+		<td>Destroy</td>
+	</tr>
+	<% end %>
+</table>
